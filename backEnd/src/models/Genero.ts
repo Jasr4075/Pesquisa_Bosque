@@ -30,7 +30,7 @@ class Genero extends Model {
         sequelize,
         modelName: 'Genero',
         tableName: 'Genero',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

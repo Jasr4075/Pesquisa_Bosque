@@ -39,7 +39,7 @@ class Data extends Model {
         sequelize,
         modelName: 'Data',
         tableName: 'Data',
-        schema: 'ProjWeb',
+        timestamps: true,
       }
     );
   }

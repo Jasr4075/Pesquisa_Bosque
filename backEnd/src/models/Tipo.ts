@@ -21,7 +21,7 @@ class Tipo extends Model {
         sequelize,
         modelName: 'Tipo',
         tableName: 'Tipo',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

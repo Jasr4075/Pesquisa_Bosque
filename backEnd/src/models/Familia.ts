@@ -30,7 +30,7 @@ class Familia extends Model {
         sequelize,
         modelName: 'Familia',
         tableName: 'Familia',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

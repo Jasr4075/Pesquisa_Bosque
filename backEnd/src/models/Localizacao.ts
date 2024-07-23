@@ -40,7 +40,7 @@ class Localizacao extends Model {
         sequelize,
         modelName: 'Localizacao',
         tableName: 'Localizacao',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }
