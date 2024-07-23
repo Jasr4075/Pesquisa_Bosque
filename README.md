@@ -4,7 +4,6 @@ Este projeto tem como objetivo desenvolver uma plataforma para almacenamento de 
 
 ## Estrutura do Projeto
 
-\`\`\`
 backEnd/
 
 │
