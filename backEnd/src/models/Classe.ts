@@ -30,7 +30,7 @@ class Classe extends Model {
         sequelize,
         modelName: 'Classe',
         tableName: 'Classe',
-        schema: 'ProjWeb',
+        timestamps: true,
       }
     );
   }

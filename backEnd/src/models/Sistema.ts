@@ -21,7 +21,7 @@ class Sistema extends Model {
         sequelize,
         modelName: 'Sistema',
         tableName: 'Sistema',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

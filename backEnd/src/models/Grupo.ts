@@ -30,7 +30,7 @@ class Grupo extends Model {
         sequelize,
         modelName: 'Grupo',
         tableName: 'Grupo',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

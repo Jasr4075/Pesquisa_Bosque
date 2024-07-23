@@ -21,7 +21,7 @@ class Reino extends Model {
         sequelize,
         modelName: 'Reino',
         tableName: 'Reino',
-        schema: 'ProjWeb',
+        timestamps: true,
       }
     );
   }

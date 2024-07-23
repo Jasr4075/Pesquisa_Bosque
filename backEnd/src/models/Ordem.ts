@@ -30,7 +30,7 @@ class Ordem extends Model {
         sequelize,
         modelName: 'Ordem',
         tableName: 'Ordem',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

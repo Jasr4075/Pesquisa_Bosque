@@ -35,7 +35,7 @@ class Usuario extends Model {
         sequelize,
         modelName: 'Usuario',
         tableName: 'Usuario',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

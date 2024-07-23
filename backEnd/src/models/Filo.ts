@@ -30,7 +30,7 @@ class Filo extends Model {
         sequelize,
         modelName: 'Filo',
         tableName: 'Filo',
-        schema: 'ProjWeb',
+          timestamps: true,
       }
     );
   }

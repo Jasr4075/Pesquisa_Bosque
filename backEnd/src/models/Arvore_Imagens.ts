@@ -40,7 +40,7 @@ class Arvore_Imagens extends Model {
         sequelize,
         modelName: 'Arvore_Imagens',
         tableName: 'Arvore_Imagens',
-        schema: 'ProjWeb',
+        timestamps: true,
       }
     );
   }

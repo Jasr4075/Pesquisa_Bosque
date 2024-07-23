@@ -59,7 +59,7 @@ class Arvore extends Model {
         sequelize,
         modelName: 'Arvore',
         tableName: 'Arvore',
-        schema: 'ProjWeb',
+        timestamps: true,
       }
     );
   }

@@ -37,7 +37,7 @@ import Data from './Data';
     Data.initModel(sequelize);
 
     // Sincroniza todos los modelos con la base de datos
-    await sequelize.sync({ force: true }); // Usa { force: true } para recrear las tablas
+    // await sequelize.sync({ force: true }); // Usa { force: true } para recrear las tablas
 
     console.log('¡Tablas creadas con éxito!');
 })();
