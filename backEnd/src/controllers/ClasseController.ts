@@ -1,4 +1,4 @@
-import {Request, Response} from 'express';
+import e, {Request, Response} from 'express';
 import Classe from '../models/Classe';
 
 const ClasseController = {
@@ -54,3 +54,5 @@ const ClasseController = {
         }
     }
 };
+
+export default ClasseController;

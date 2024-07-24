@@ -54,3 +54,5 @@ const FiloController = {
         }
     }
 };
+
+export default FiloController;

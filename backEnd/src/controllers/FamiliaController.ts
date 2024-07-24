@@ -54,3 +54,5 @@ const FamiliaController = {
         }
     }
 };
+
+export default FamiliaController;

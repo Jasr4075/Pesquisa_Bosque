@@ -54,3 +54,5 @@ const SistemaController = {
         }
     }
 };
+
+export default SistemaController;

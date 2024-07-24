@@ -56,3 +56,5 @@ const GrupoController = {
         }
     }
 };
+
+export default GrupoController;

@@ -1,11 +1,16 @@
 import { Request, Response } from "express";
 import Arvore from "../models/Arvore";
-import { create } from "domain";
 
 const ArvoreController = {
     create: async (req: Request, res: Response) => {
         try {
             const { nome, descricao, especie, idade, altura, latitude, longitude } = req.body;
+            
+            // Validar campos requeridos
+            if (!nome || !especie) {
+                return res.status(400).json({ error: "Nome y especie son requeridos" });
+            }
+
             const arvore = await Arvore.create({
                 nome,
                 descricao,
@@ -32,6 +37,11 @@ const ArvoreController = {
         try {
             const { id } = req.params;
             const arvore = await Arvore.findByPk(id);
+
+            if (!arvore) {
+                return res.status(404).json({ error: "Árvore não encontrada" });
+            }
+
             res.status(200).json(arvore);
         } catch (error) {
             res.status(500).json({ error: (error as any).message });
@@ -41,6 +51,13 @@ const ArvoreController = {
         try {
             const { id } = req.params;
             const { nome, descricao, especie, idade, altura, latitude, longitude } = req.body;
+
+            const arvore = await Arvore.findByPk(id);
+
+            if (!arvore) {
+                return res.status(404).json({ error: "Árvore não encontrada" });
+            }
+
             await Arvore.update({
                 nome,
                 descricao,
@@ -50,6 +67,7 @@ const ArvoreController = {
                 latitude,
                 longitude
             }, { where: { id } });
+
             res.sendStatus(204);
         } catch (error) {
             res.status(500).json({ error: (error as any).message });
@@ -58,6 +76,13 @@ const ArvoreController = {
     delete: async (req: Request, res: Response) => {
         try {
             const { id } = req.params;
+
+            const arvore = await Arvore.findByPk(id);
+
+            if (!arvore) {
+                return res.status(404).json({ error: "Árvore não encontrada" });
+            }
+
             await Arvore.destroy({ where: { id } });
             res.sendStatus(204);
         } catch (error) {
@@ -65,3 +90,5 @@ const ArvoreController = {
         }
     }
 };
+
+export default ArvoreController;

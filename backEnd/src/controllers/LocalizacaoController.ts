@@ -54,3 +54,5 @@ const LocalizacaoController = {
         }
     }
 };
+
+export default LocalizacaoController;
