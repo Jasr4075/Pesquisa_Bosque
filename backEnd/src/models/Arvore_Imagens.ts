@@ -4,8 +4,8 @@ import Arvore from './Arvore';
 class Arvore_Imagens extends Model {
   public id!: number;
   public descricao!: string;
-  public imagem!: Buffer;
-  public qrcode!: Buffer;
+  public imagem!: string;
+  public qrcode!: string;
   public arvore_id!: number;
 
   static initModel(sequelize: Sequelize) {
@@ -21,11 +21,11 @@ class Arvore_Imagens extends Model {
           allowNull: false,
         },
         imagem: {
-          type: DataTypes.BLOB,
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         qrcode: {
-          type: DataTypes.BLOB,
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         arvore_id: {

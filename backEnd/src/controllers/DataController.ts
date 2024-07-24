@@ -56,3 +56,5 @@ const DataController = {
         }
     }
 };
+
+export default DataController;

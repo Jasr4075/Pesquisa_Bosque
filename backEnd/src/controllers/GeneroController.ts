@@ -56,3 +56,5 @@ const GeneroController = {
         }
     }
 };
+
+export default GeneroController;

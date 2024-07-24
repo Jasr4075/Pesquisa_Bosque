@@ -54,3 +54,5 @@ const ReinoController = {
         }
     }
 };
+
+export default ReinoController;

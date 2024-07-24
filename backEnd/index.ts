@@ -4,6 +4,9 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import { Sequelize } from 'sequelize';
+import router from './src/routes/index';
+
+require('./src/models/index');
 
 dotenv.config();
 
@@ -15,6 +18,8 @@ app.use(cors({
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
 }));
+
+app.use('/api', router);
 
 app.use(morgan('dev'));
 
